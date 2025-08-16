@@ -18,6 +18,10 @@ using namespace std;
 
 int32_t main()
 {_
+
+    /* Maior sequência de dias consecutivos: dado um vetor crescente de dias em que Bernardo foi à academia,
+    retorna o tamanho da maior sequência contínua. */
+
     int n, ant, atual, x;
     int count = 1, max = 1;
     vector<int> dias;
