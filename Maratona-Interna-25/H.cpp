@@ -18,22 +18,41 @@
 
 using namespace std;
 
+
+double calcula(int esq, int dir){
+    if(esq == dir){
+        return 1.0;
+    }
+    int meio = (dir + esq)/2;
+    int total = dir - esq + 1;
+    int quant_esq = meio - esq + 1;
+    int quant_dir = dir - meio;
+    return (1.0 + (calcula(esq, meio) * ((double)quant_esq/total))
+    + (calcula(meio + 1, dir) * ((double) quant_dir/total)));
+    
+}
+
 int main()
 {
 
-    /* Imprimir o numero esperado de perguntas necessarias para descobrir qual peixe foi o escolhido dentre 10 peixes */
+    /* Imprimir o numero esperado de perguntas necessarias
+    para descobrir qual peixe foi o escolhido 
+    
+    Ideia é quebrar os conjuntos em dois subconjuntos, fazer meio que uma busca binaria 
+    calcular a esperanca de cada subconjunto + 1 para considerar a pergunta que estou fazendo.
 
-    int n;
-    double prob;
+    Base da recursao: se eu so tenho 1 peixe, o numero esperado de perguntas é 1.
+    
+    */
+
+    int n = 0, esq = 0;
     double esperado = 0;
     string peixe;
     cin >> n;
-    prob = 1.0 / n;
-
-    for (int i = 1; i <= n; ++i) {
+    for(int i = 0; i < n; i++){
         cin >> peixe;
-        esperado += prob * i;
     }
+    esperado = calcula(esq, n - 1);
     cout << esperado << endl;
     return 0;
 }

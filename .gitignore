@@ -1,0 +1,28 @@
+# Ignore arquivos e pastas de compilação, binários, e outros não relacionados às resoluções
+*.exe
+*.out
+*.o
+*.obj
+*.dSYM/
+*.log
+*.tmp
+*.bin
+*.class
+*.pyc
+*.DS_Store
+
+# Ignorar pastas comuns de IDE
+.vscode/
+.idea/
+
+# Ignorar PDFs e outros arquivos de enunciado
+*.pdf
+
+# Ignorar tudo exceto arquivos fonte das resoluções
+!/Contest-1/*.cpp
+!/Maratona-Interna-25/*.cpp
+
+# Ignorar arquivos de entrada/saída de testes
+*.in
+*.ans
+*.txt
