@@ -21,6 +21,7 @@
 # Ignorar tudo exceto arquivos fonte das resoluções
 !/Contest-1/*.cpp
 !/Maratona-Interna-25/*.cpp
+!/Contest-2/*.cpp
 
 # Ignorar arquivos de entrada/saída de testes
 *.in

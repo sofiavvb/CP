@@ -21,6 +21,7 @@
     {_
         
         /*Rotacionar parênteses para balancear:*/
+        
         //Dada uma string com '(' e ')' (quantidade igual), retorna o
         //número mínimo de caracteres a mover do início para o final
         //para que nenhum prefixo tenha mais ')' que '('.
